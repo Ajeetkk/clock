@@ -60,7 +60,7 @@ class App extends React.Component {
     var code = `import RectClockWidget from 'react-clock-app'
    render() {
          return (
-          <ReactClock />
+          <RectClockWidget />
    )}`;
     return (
       <div>
