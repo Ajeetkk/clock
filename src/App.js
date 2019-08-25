@@ -74,8 +74,8 @@ class App extends React.Component {
               fontSize: "50px",
               border: "2px solid",
               padding: "15px",
-              marginLeft: "30%",
-              marginRight: "30%",
+              marginLeft: "25%",
+              marginRight: "25%",
               background: "greenyellow",
               boxShadow: "5px 6px yellow"
             }}
