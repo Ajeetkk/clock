@@ -1,4 +1,6 @@
 import React from "react";
+import SyntaxHighLighter from "react-syntax-highlighter";
+import { twilight } from "react-syntax-highlighter/dist/esm/styles/prism";
 // import mny from "manavify";
 class App extends React.Component {
   constructor() {
@@ -7,6 +9,7 @@ class App extends React.Component {
       clock: ""
     };
   }
+
   componentDidMount() {
     var that = this;
     setInterval(function() {
@@ -54,12 +57,50 @@ class App extends React.Component {
   }
 
   render() {
+    var code = `import RectClockWidget from 'react-clock-app'
+   render() {
+         return (
+          <ReactClock />
+   )}`;
     return (
-      <div style={{ textAlign: "center", marginTop: "50px", fontSize: "50px" }}>
-        {this.state.clock ? this.state.clock : "no date"}
+      <div>
+        <div>
+          <h1 style={{ textAlign: "center" }}>Clock Widget</h1>
+          <br />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              fontSize: "50px",
+              border: "2px solid",
+              padding: "15px",
+              marginLeft: "30%",
+              marginRight: "30%",
+              background: "greenyellow",
+              boxShadow: "5px 6px yellow"
+            }}
+          >
+            {this.state.clock ? this.state.clock : "Loading widget..."}
+          </div>
+        </div>
         <br />
-        <a href="/react-clock-app.zip">download</a>
-        {/* {mny.alertMsg()} */}
+
+        <h2 style={{ marginLeft: "150PX", width: "50%", marginTop: "100px" }}>
+          Steps for use in project--
+          <br /> 1> download widgets <br />
+          <a href="/react-clock-app.zip"> click here to download</a>
+          <br />
+          2> Unzip widget into your node_modules directory.
+          <br />
+          3> sample code:
+          <SyntaxHighLighter language="javascript" style={twilight}>
+            {code}
+          </SyntaxHighLighter>
+          <br />
+          4> RectClockWidget, This write into return of you project as
+          component.
+          {/* {mny.alertMsg()} */}
+        </h2>
       </div>
     );
   }
