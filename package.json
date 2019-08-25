@@ -1,8 +1,8 @@
 {
-  "name": "clock",
-  "version": "0.1.0",
-  "private": true,
+  "name": "my-clock-react-app",
+  "version": "1.0.0",
   "dependencies": {
+    "manavify": "^1.0.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
